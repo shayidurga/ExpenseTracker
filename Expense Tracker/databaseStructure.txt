@@ -1,0 +1,26 @@
+mysql> desc expensetrack.expenses;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| id          | int         | NO   | PRI | NULL    | auto_increment |
+| userId      | int         | YES  | MUL | NULL    |                |
+| date        | date        | YES  |     | NULL    |                |
+| category    | varchar(50) | YES  |     | NULL    |                |
+| description | text        | YES  |     | NULL    |                |
+| expense     | double      | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc expensetrack.user;
++------------+--------------+------+-----+-------------------+-------------------+
+| Field      | Type         | Null | Key | Default           | Extra             |
++------------+--------------+------+-----+-------------------+-------------------+
+| UserID     | int          | NO   | PRI | NULL              | auto_increment    |
+| full_name  | varchar(255) | NO   |     | NULL              |                   |
+| username   | varchar(100) | NO   | UNI | NULL              |                   |
+| email      | varchar(255) | NO   | UNI | NULL              |                   |
+| password   | varchar(255) | NO   |     | NULL              |                   |
+| gender     | varchar(10)  | YES  |     | NULL              |                   |
+| created_at | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++------------+--------------+------+-----+-------------------+-------------------+
+7 rows in set (0.00 sec)
